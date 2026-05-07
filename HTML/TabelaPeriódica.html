@@ -37,19 +37,34 @@
             background: #1e293b;
             border: 1px solid #334155;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Coloca o número do símbolo */
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.2s;       /* Suaviza a animação do hover */
         }
 
         /* Efeito para passar mouse */
 
         .elemento:hover {
-            transform: scale(1.2);
+            transform: scale(1.2); /* Aumenta o tamanho em 10% */ 
             z-index: 10;
             border-color: #38bdf8;
+        }
+
+        .simbolo {
+            font-size: 0.7rem;
+            color: #94a3b8;
+        }
+
+        /* Estilização do painel onde as informações aparecem */
+        #detalhes {
+            margin-top: 30px;
+            padding: 15px;
+            border: 2px #38bdfd;
+            border-radius: 8px;
+            min-width: 300px;
+            text-align: center;
         }
 
         
@@ -59,5 +74,17 @@
 </head>
 <body>
     
+<h1>Tabela Periódica interativa</h1>
+
+<div class="tabela-periodica">
+    <div class="elemento" style="--col: 1; --row: 1;"
+    data-nome="hidrogenio" data-massa: "1.008">
+        <span class="numero">1</span>
+        <span class="simbolo">H</span>
+</div>
+
+<div class="elemento" style="--col: 18; --row: 1;"
+    data-nome="Hélio" data-massa:="4.002">
+
 </body>
 </html>
